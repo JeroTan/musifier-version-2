@@ -1,6 +1,6 @@
 import { createContext } from "react";
 // import { createMode } from "@/Elements/Instruments/Components.jsx";
-import { makeScale, notePatternType, standardNotes } from "../Components";
+import { makeScale, notePatternType } from "../Components";
 
 //InterfaceDefault
 export const InterfaceDefault  = {
