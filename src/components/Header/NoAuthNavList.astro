@@ -1,0 +1,132 @@
+---
+import Icon from "@components/Icon.astro";
+import HeaderDropDownDesign from "./HeaderDropDownDesign.astro";
+import Dropdown from "@components/Overlay/Dropdown.astro";
+
+const path = Astro.url.pathname;
+
+function isPage(conditionPath:string){
+  const regexString = `^${conditionPath}(?:[\\/?#].*)?$`;
+  return new RegExp(regexString, "gm").test(path)
+}
+---
+<HeaderDropDownDesign>
+  <li>
+    <Dropdown
+      id="dropdown-information"
+      buttonClass={`
+        text-lg cursor-pointer
+        md:mt-0 mt-2
+        ${isPage("/instrument")
+          ? "text-blue-400"
+          : "text-white hover:text-blue-400"
+        }
+        rounded
+        font-semibold
+        flex items-center
+        md:w-auto w-full
+      `}
+      contentClass={`
+        md:w-fit w-full
+      `}
+      class="md:w-fit w-full"
+    >
+      <Fragment slot="button">
+        Instrument
+        <Icon name="down" class="size-4 mt-1 -ml-1" />
+      </Fragment>
+      <div class=" bg-white rounded-b-lg shadow-sm overflow-hidden pt-2">
+        <ul class="text-sm text-gray-700">
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/instrument/electric-guitar") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/instrument/electric-guitar") ? {"aria-current":"page",href:"#"} : {href:"/instrument/electric-guitar"}) }
+            >
+              Electric Guitar
+            </a>
+          </li>
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/instrument/piano") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/instrument/piano") ? {"aria-current":"page",href:"#"} : {href:"/instrument/piano"}) }
+            >
+              Piano
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Dropdown>
+  </li>
+  <li class="">
+    <Dropdown
+      id="dropdown-special-service"
+      buttonClass={`
+        text-lg cursor-pointer
+        md:mt-0 mt-2
+        ${isPage("/theory")
+          ? "text-blue-400"
+          : "text-white hover:text-blue-400"
+        }
+        rounded
+        font-semibold
+        flex items-center
+        md:w-auto w-full
+      `}
+      contentClass={`
+        md:w-fit w-full
+      `}
+      class="md:w-fit w-full"
+    >
+      <Fragment slot="button">
+        Theory
+        <Icon name="down" class="size-4 mt-1 -ml-1" />
+      </Fragment>
+      <div class="bg-white rounded-b-lg shadow-sm overflow-hidden pt-2">
+        <ul class="text-sm text-gray-700">
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/theory/introduction/essential") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/theory/introduction/essential") ? {"aria-current":"page",href:"#"} : {href:"/theory/introduction/essential"}) }
+            >
+              Essentials
+            </a>
+          </li>
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/theory/guitar/fretboard") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/theory/guitar/fretboard") ? {"aria-current":"page",href:"#"} : {href:"/theory/guitar/fretboard"}) }
+            >
+              Fret Board
+            </a>
+          </li>
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/theory/readnotes") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/theory/readnotes") ? {"aria-current":"page",href:"#"} : {href:"/theory/readnotes"}) }
+            >
+              Read Notes
+            </a>
+          </li>
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/theory/introduction/readnotes") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/theory/introduction/readnotes") ? {"aria-current":"page",href:"#"} : {href:"/theory/introduction/readnotes"}) }
+            >
+              Learn Beats
+            </a>
+          </li>
+          <li>
+            <a
+              class={`block px-4 py-2 ${isPage("/theory/introduction/learnbeats") ? "text-blue-500" : "hover:bg-primary hover:text-blue-500"} `}
+              { ...(isPage("/theory/introduction/learnbeats") ? {"aria-current":"page",href:"#"} : {href:"/theory/introduction/learnbeats"}) }
+            >
+              View All
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Dropdown>
+  </li>
+  
+
+</HeaderDropDownDesign>

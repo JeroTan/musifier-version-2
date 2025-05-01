@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="OnlyMekani_NoName" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.2" viewBox="0 0 162.29787 162.29787">
+  <rect id="Border" x="23.76797" y="23.76797" width="114.76193" height="114.76193" transform="translate(-33.61299 81.14894) rotate(-45)" fill="#4a7dc4" stroke-width="0"/>
+  <g id="Logo">
+    <g id="Face">
+      <polygon points="80.85312 81.14894 76.1702 103.31916 80.85312 111.48933 85.53604 103.31916 80.85312 81.14894" fill="#292b6e" stroke-width="0"/>
+      <g>
+        <polygon points="77.96541 115.48887 62.52394 94.38298 66.4932 109.45224 77.96541 115.48887" fill="#292b6e" stroke-width="0"/>
+        <polygon points="83.74083 115.48887 99.1823 94.38298 95.21304 109.45224 83.74083 115.48887" fill="#292b6e" stroke-width="0"/>
+      </g>
+    </g>
+    <g id="Wings">
+      <g id="Right_Wing" data-name="Right Wing">
+        <polyline points="102.62777 91.91805 99.07396 105.8599 119.1244 85.48936" fill="#292b6e" stroke-width="0"/>
+        <polyline points="92.94355 85.31915 100.7261 90.61702 121.60312 82.79787" fill="#292b6e" stroke-width="0"/>
+        <polygon points="103.92227 82.79787 122.17759 81.02128 125.97546 72.59574 103.92227 82.79787" fill="#292b6e" stroke-width="0"/>
+        <polygon points="122.10312 56.91489 120.23078 72.40426 100.34926 82.79787 122.10312 56.91489" fill="#292b6e" stroke-width="0"/>
+      </g>
+      <g id="Right_Wing-2" data-name="Right Wing">
+        <polyline points="59.07847 91.91805 62.63228 105.8599 42.58184 85.48936" fill="#292b6e" stroke-width="0"/>
+        <polyline points="68.76269 85.31915 60.98014 90.61702 40.10312 82.79787" fill="#292b6e" stroke-width="0"/>
+        <polygon points="57.78397 82.79787 39.52865 81.02128 35.73078 72.59574 57.78397 82.79787" fill="#292b6e" stroke-width="0"/>
+        <polygon points="39.60312 56.91489 41.47546 72.40426 61.35698 82.79787 39.60312 56.91489" fill="#292b6e" stroke-width="0"/>
+      </g>
+    </g>
+  </g>
+</svg>

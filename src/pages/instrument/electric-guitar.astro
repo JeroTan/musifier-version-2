@@ -1,0 +1,18 @@
+---
+import PagePlate from "@layouts/PagePlate.astro";
+import {ElectricGuitarInterface} from "@components/Elements/Instruments/ElectricGuitar/Interface";
+
+---
+<PagePlate>
+  <div class="mt-32"></div>
+  <header class={`mb-10 mt-16`}>
+    <h2 class=" my-header-flat text-center">Electric Guitar</h2>
+    <p class=" my-text text-center">You may tap on any of the frets/strings to highlight the notes.</p>
+  </header>
+  <div class={`w-full relative flex justify-center`}>
+		<main style={{ overflowY:"auto"}} class={` custom-scroll-horizontal`}>
+      <ElectricGuitarInterface client:load  />
+		</main>
+  </div>  
+  <div class="mt-32"></div>
+</PagePlate>

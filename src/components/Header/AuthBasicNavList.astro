@@ -1,0 +1,45 @@
+---
+import HeaderDropDownDesign from "./HeaderDropDownDesign.astro";
+
+const path = Astro.url.pathname;
+
+function isPage(conditionPath:string){
+  const regexString = `^${conditionPath}(?:[\\/?#].*)?$`;
+  return new RegExp(regexString, "gm").test(path)
+}
+---
+<HeaderDropDownDesign>
+  <!-- <li>
+    <a 
+      class={`
+        block  md:mt-0 mt-2
+        ${isPage("/account") 
+          ? "btn btn-primary md:btn-none md:!bg-transparent md:text-primary font-semibold" 
+          : "btn md:btn-none md:hover:text-primary"
+        }
+        rounded
+        `}
+      { ...(isPage("/account") ? {"aria-current":"page",href:"/account"} : {href:"/account"}) }
+    >
+      Account
+    </a>
+  </li> -->
+  <li>
+    <a
+      id="log-out-button"
+      class={`
+        block  md:mt-0 mt-2
+        ${isPage("/auth/logout")
+          ? "btn btn-primary md:btn-none md:!bg-transparent md:text-primary" 
+          : "btn md:btn-none md:hover:text-primary"
+        }
+        font-bold
+        rounded
+        `}
+      { ...(isPage("/auth/logout") ? {"aria-current":"page",href:"#"} : {href:"#"}) }
+
+    >
+      Logout
+    </a>
+  </li>
+</HeaderDropDownDesign>

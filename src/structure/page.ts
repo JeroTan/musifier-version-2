@@ -1,0 +1,1 @@
+export type PAGE_TYPE = "Organization"|"BlogPosting"|"NewsArticle";

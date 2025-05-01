@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Scrolls */
+body::-webkit-scrollbar-track { /* The Body not the Slider */
+    padding: 2px 0;
+    @apply bg-gray-700 ;
+}
+
+body::-webkit-scrollbar { /* How Wide the body */
+    border-radius: 10px;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb { /* The slider */
+    @apply bg-blue-500 rounded-full outline outline-1 ;
+}
+
+.custom-scroll::-webkit-scrollbar-track{
+    padding: 2px 0;
+    @apply bg-gray-700;
+}
+.custom-scroll::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full outline outline-1 ;
+}
+
+.custom-scroll-horizontal::-webkit-scrollbar-track{
+    padding: 2px 0;
+    @apply bg-gray-700;
+}
+.custom-scroll-horizontal::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 9px;
+}
+
+.custom-scroll-horizontal::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full outline outline-1 ;
+}
+
+
+.my-img{
+    @apply relative w-full h-full object-contain object-center;
+}
+.my-backdrop{
+    backdrop-filter: blur(5px) brightness(.5) contrast(.95)!important;
+    -webkit-backdrop-filter: blur(5px) brightness(.5) contrast(.95)!important;
+}
+
+
+/*TEXT */
+.my-header{
+    @apply md:text-7xl sm:text-6xl text-5xl font-bold pb-2 tracking-tight;
+}
+.my-header-flat{
+    @apply sm:text-6xl text-5xl font-extralight pb-2 tracking-wide;
+}
+.my-title-big{
+    @apply sm:text-4xl text-3xl font-bold tracking-wide
+}
+.my-title{
+    @apply sm:text-4xl text-3xl font-semibold tracking-tight
+}
+.my-semi-title{
+    @apply text-3xl font-semibold tracking-tight
+}
+.my-text-big{
+    @apply sm:text-xl text-lg font-semibold tracking-wide
+}
+.my-text{
+    @apply text-lg font-light tracking-wide
+}
+.my-subtext{
+    @apply text-sm font-light tracking-wider
+}
+.my-subtext-big{
+    @apply text-sm font-bold tracking-wider
+}
+.my-infotext{
+    @apply text-xs font-light tracking-wider
+}
+
+
+/* FORM */
+.my-textbox{
+    @apply relative basis-full rounded-lg bg-gray-500/25 focus:bg-gray-700 hover:bg-gray-200/25 focus:outline-none px-2 py-1 text-gray-400 focus:text-gray-100 hover:text-gray-100  ;
+}
+.my-errorbox{
+    @apply border-red-400 border-2;
+}
+.my-goodbox{
+    @apply border-green-400 border-2;
+}
+.my-btn{
+    @apply cursor-pointer rounded-lg  hover:scale-105 bg-gray-300 hover:bg-gray-500 text-slate-800 font-semibold focus:outline-sky-100 focus:outline focus:outline-[1px];
+}
+.my-btn-big{
+    @apply cursor-pointer rounded-lg  hover:scale-105 bg-gray-300 hover:bg-gray-500 text-slate-800 font-light md:text-3xl text-xl focus:outline-sky-100 focus:outline focus:outline-[1px];
+}
+.my-btn-blue{
+    @apply cursor-pointer rounded-lg  hover:scale-105 bg-sky-300 hover:bg-sky-400 text-slate-800 font-semibold focus:outline-sky-100 focus:outline focus:outline-[1px];
+}
+.my-btn-clear{
+    @apply cursor-pointer rounded-lg hover:scale-105 focus:outline-sky-100 focus:outline focus:outline-[1px];
+}
+
+
+/*Dialog & Pop-ups */
+.my-dialog::backdrop, .my-backdrop{
+    backdrop-filter: blur(5px) brightness(.4) contrast(.95)!important;
+    -webkit-backdrop-filter: blur(5px) brightness(.4) contrast(.95)!important;
+}
+
+.my-dialog{
+    overscroll-behavior: 'contain'!important;
+    animation: slide-in-top 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    /*For Tailwind*/
+    @apply bg-gray-800 p-2 text-gray-200  outline-none rounded-md shadow shadow-gray-600/50;
+}
+
+
+
+
+/*Animation */
+.SlideFromRight {
+    animation: SlideFromRight .3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+@keyframes SlideFromRight {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.a-slide-in-top {
+	animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.a-kuru-kuru {
+	animation: a-kuru-kuru 1s linear 0s infinite;
+}
+@keyframes a-kuru-kuru {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

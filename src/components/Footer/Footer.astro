@@ -1,0 +1,79 @@
+---
+import Icon from "@components/Icon.astro";
+import Brand from "@assets/images/Mekani.svg";
+import Image from "astro/components/Image.astro";
+---
+<footer class="flex justify-center bg-gray-900">
+
+  <main class=" flex flex-wrap gap-10 my-10" style={{width:"70rem"}}>
+      <section class="basis-full flex md:flex-nowrap flex-wrap gap-10 sm:px-10 px-5">
+          <section class=" grow-0 shrink-0 md:basis-[10rem] basis-full flex justify-center items-center">
+              <div class=" md:w-full w-[10rem]">
+                  <div class="relative w-full aspect-square">
+                      <Image src={Brand} alt="Creator's Logo" class="my-img" />
+                  </div>
+              </div>
+
+          </section>
+          <section class="flex-1 basis-full mr-auto">
+              <h1 class="my-text-big mb-4 md:text-left text-center">Creator's Message</h1>
+              <p class="text-justify my-subtext">
+                Learning a new instrument will be quite a long journey. We started with the essentials then later on, we put it into practice. But at some point, we will all come across music theory. <span id="more" class="hidden">Because of music theory, there are times where we need to become mathematicians instead of musicians. What we need now is a tool that will aid our memory in grasping those concepts. Forget about paper and pencils, as Musifier, one of the tools out there that may help you in your musical journey.
+                </span> <span id="more-less-button" class="underline underline-offset-2 font-normal cursor-pointe">more</span>
+              </p>
+          </section>
+
+          <section class="flex-0 md:basis-auto basis-full">
+              <h1 class="my-text-big mb-4 md:text-start text-center">Socials</h1>
+              <div class="flex gap-5 md:justify-start justify-center">
+                  <a class="block" target="_blank" href="https://www.fb.com/mekaniRxON">
+                    <Icon name="facebook" inClass=" fill-gray-800" outClass=" w-8 h-8 p-1 my-btn" />
+                  </a>
+                  <a class="block" target="_blank" href="https://www.twitter.com/Mekani_Tekno">
+                    <Icon name="twitter" inClass=" fill-gray-800" outClass=" w-8 h-8 p-1 my-btn" />
+                  </a>
+                  <a class="block" target="_blank" href="https://www.youtube.com/@mekani_tekno">
+                    <Icon name="youtube" inClass=" fill-gray-800" outClass=" w-8 h-8 p-1 my-btn" />
+                  </a>
+              </div>
+          </section>
+      </section>
+
+
+      <section class="w-full">
+          <p class="my-infotext text-center text-slate-500">&#169;Musifier x Mekani_Tekno 2024</p>
+      </section>
+
+  </main>
+
+
+</footer>
+<script>
+//---Import
+
+//---Const
+const footerElement = document.querySelector("footer") as HTMLElement;
+const moreElement = footerElement.querySelector("#more-less-button") as HTMLButtonElement;
+const moreTextElement = footerElement.querySelector("#more") as HTMLElement;
+
+
+//--- Functionality
+function openMoreText(){
+  moreTextElement.classList.remove("hidden");
+  moreElement.textContent = "less";
+}
+
+function closeMoreText(){
+  moreTextElement.classList.add("hidden");
+  moreElement.textContent = "more";
+}
+
+//---> Listener
+moreElement.addEventListener("click", function(){
+  if(moreTextElement.classList.contains("hidden")){
+    openMoreText();
+  }else{
+    closeMoreText();
+  }
+});
+</script>

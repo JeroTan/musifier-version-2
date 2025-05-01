@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string,
+	pageMicrodataScope: string,
+}
+
+const {
+	title,
+	pageMicrodataScope = "https://schema.org/WebPage",
+} = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en" itemscope itemtype={pageMicrodataScope}>
+	<head>
+		{/* HTML Format */}
+
+  	<meta name="application-name" content="Musifier">
+		<title>{title}</title>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" type="image/icon" href="favicon.ico" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+ 
+    <!-- Google Sign-In -->
+    <script is:inline src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="10406787598-m26739mjit32isfgqn85tp5lcah1iuk3.apps.googleusercontent.com">
+		{/* HTML Format */}
+
+		<slot name="head" />
+		<script>
+			import 'preline';
+		</script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
