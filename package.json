@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/cloudflare": "^12.5.2",
-    "@astrojs/react": "^4.2.7",
+    "@astrojs/react": "^4.0.0",
     "@jsarmyknife/native--icon": "^0.1.7-beta.0",
     "@jsarmyknife/native--math": "^0.1.11-beta.0",
     "@jsarmyknife/native--parse": "^0.1.5-beta.0",
